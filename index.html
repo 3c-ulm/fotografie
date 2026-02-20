@@ -1,45 +1,74 @@
-<style>
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f4f4f9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        padding: 20px; /* Verhindert, dass Buttons am Rand kleben */
-        box-sizing: border-box;
-    }
-    h1 { 
-        color: #333; 
-        margin-bottom: 30px; 
-        text-align: center; /* Zentriert die Überschrift auf Mobile */
-        font-size: 1.5rem;
-    }
-    .container {
-        display: flex;
-        flex-direction: column; /* Stapelt Buttons auf Mobile sauber übereinander */
-        gap: 20px;
-        width: 100%;
-        max-width: 300px; /* Begrenzt die Breite für eine bessere Optik */
-    }
-    .btn {
-        display: flex; /* Wichtig für die Zentrierung */
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        border-radius: 12px;
-        transition: transform 0.2s;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        min-height: 60px; /* Sorgt für einheitliche Höhe */
-    }
-    .audi { background-color: #333333; }
-    .held { background-color: #004a99; }
-    
-    .btn:active { transform: scale(0.98); } /* Feedback beim Tippen auf dem Handy */
-</style>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrzeugaufbereitung Auswahl</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        h1 { 
+            color: #333; 
+            margin-bottom: 30px; 
+            text-align: center; 
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column; /* Better for mobile stacking */
+            align-items: center;
+            width: 100%;
+        }
+        .btn {
+            /* This section centers the text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            padding: 25px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            transition: transform 0.2s, background-color 0.2s;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        /* Audi Zentrum Color */
+        .audi { background-color: #333333; }
+        .audi:hover { background-color: #000000; transform: scale(1.05); }
+        
+        /* Held & Ströhle Color */
+        .held { background-color: #004a99; }
+        .held:hover { background-color: #003366; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <h1>Bitte wählen Sie Ihren Standort</h1>
+
+    <div class="container">
+        <a href="https://nova360app.de/vgrd/ulmaudi/audiulm/server/main/login.php" class="btn audi">
+            Audi Zentrum
+        </a>
+        
+        <a href="https://nova360app.de/vgrd/heldstroehlede/heldstroehle/server/main/login.php" class="btn held">
+            Held & Ströhle
+        </a>
+    </div>
+
+</body>
+</html>
